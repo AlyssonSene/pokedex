@@ -19,6 +19,7 @@ const HomepageOrganism: React.FC = () => {
 					state.pokemons.slice(startIndex, endIndex).map((pokemon, index) => {
 						return (
 							<CardsMolecule
+								gifUrl={pokemon.gifUrl}
 								key={index}
 								pokemonName={pokemon.name}
 								pokemonNumber={pokemon.id}

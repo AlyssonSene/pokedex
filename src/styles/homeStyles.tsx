@@ -16,7 +16,7 @@ export const PokemonCard = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	background: linear-gradient(to bottom, rgb(43, 42, 42), rgb(27, 27, 27));
 	border-radius: 10px;
 	border: 2px solid lightgreen;
@@ -25,17 +25,22 @@ export const PokemonCard = styled.div`
 	text-align: center;
 	color: #f1f1f1;
 	width: 220px;
-	height: 110px;
+	height: 280px;
 	cursor: pointer;
 	div {
 		h4 {
-			transition: font-size 0.1s ease-out;
+			width: 100%;
 		}
+	}
+	img {
+		padding: 0;
+		margin: 0;
 	}
 `
 
 export const PokemonNumber = styled.div`
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	width: 100%;
 `

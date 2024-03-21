@@ -11,6 +11,7 @@ export interface ITextAtom {
 export interface ICards {
 	pokemonName: string
 	pokemonNumber: string
+	gifUrl: string
 }
 
 export interface IButton {

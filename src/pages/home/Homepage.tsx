@@ -12,7 +12,8 @@ const Homepage: React.FC = () => {
 			const pokemonsWithId = data.results.map(
 				(pokemon: IPokemons, index: number) => ({
 					...pokemon,
-					id: (index + 1).toString()
+					id: (index + 1).toString(),
+					gifUrl: `src/assets/pokemons/poke_${index + 1}.gif`
 				})
 			)
 			state.setPokemons(pokemonsWithId)

@@ -2,7 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-	font-family: 'Montserrat Alternates','Inter', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: #16131b;
+
 }
 
 a {
@@ -13,12 +18,4 @@ a {
 html::-webkit-scrollbar {
 	width: 0;
 	height: 0;
-}
-
-.modal-content {
-	border-radius: 26px !important;
-}
-
-iframe {
-	border-radius: 16px;
 }

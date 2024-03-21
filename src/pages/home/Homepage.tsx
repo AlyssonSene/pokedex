@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from 'react'
 import HomepageOrganism from '../../components/organisms/HomepageOrganism'
 import { UseAppContext } from '../../context/hook'
+import { IPokemons } from '../../interfaces/pokeInterface'
 import { getAll } from '../../utils/getPokemons'
 
 const Homepage: React.FC = () => {
@@ -8,8 +9,13 @@ const Homepage: React.FC = () => {
 	const getPokemons = useCallback(async () => {
 		try {
 			const data = await getAll('?limit=100&offset=0')
-
-			state.setPokemons(data.data.results)
+			const pokemonsWithId = data.results.map(
+				(pokemon: IPokemons, index: number) => ({
+					...pokemon,
+					id: (index + 1).toString()
+				})
+			)
+			state.setPokemons(pokemonsWithId)
 		} catch (error) {
 			console.log(error)
 		}

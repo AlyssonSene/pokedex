@@ -10,6 +10,7 @@ export interface ITextAtom {
 
 export interface ICards {
 	pokemonName: string
+	pokemonNumber: string
 }
 
 export interface IButton {

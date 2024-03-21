@@ -17,7 +17,13 @@ const HomepageOrganism: React.FC = () => {
 			<C.CardsContainer>
 				{state.pokemons &&
 					state.pokemons.slice(startIndex, endIndex).map((pokemon, index) => {
-						return <CardsMolecule key={index} pokemonName={pokemon.name} />
+						return (
+							<CardsMolecule
+								key={index}
+								pokemonName={pokemon.name}
+								pokemonNumber={pokemon.id}
+							/>
+						)
 					})}
 			</C.CardsContainer>
 			<C.Footer>

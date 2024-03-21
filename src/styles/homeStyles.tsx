@@ -15,7 +15,8 @@ export const CardsContainer = styled.div`
 export const PokemonCard = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
 	background: linear-gradient(to bottom, rgb(43, 42, 42), rgb(27, 27, 27));
 	border-radius: 10px;
 	border: 2px solid lightgreen;
@@ -31,6 +32,12 @@ export const PokemonCard = styled.div`
 			transition: font-size 0.1s ease-out;
 		}
 	}
+`
+
+export const PokemonNumber = styled.div`
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
 `
 
 export const Footer = styled.div`

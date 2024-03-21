@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+	font-family: 'Montserrat Alternates','Inter', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+html::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+.modal-content {
+	border-radius: 26px !important;
+}
+
+iframe {
+	border-radius: 16px;
+}

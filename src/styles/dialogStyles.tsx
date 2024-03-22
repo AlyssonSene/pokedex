@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const DialogContainer = styled.div`
 	background-color: #2a2828;
 	border: 2px solid lightgreen;
-	height: 400px;
+	height: 300px;
 	color: white;
 	width: 600px;
 	display: flex;

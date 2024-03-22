@@ -48,8 +48,9 @@ export const Footer = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	position: relative;
-	margin-top: 50px;
+	position: absolute;
+	bottom: 0;
+	padding: 25px;
 `
 
 export const PaginationContainer = styled.div`

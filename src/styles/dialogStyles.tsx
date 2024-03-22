@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const DialogContainer = styled.div`
 	background-color: #2a2828;
 	border: 2px solid lightgreen;
-	height: 300px;
+	height: 350px;
 	color: white;
 	width: 600px;
 	display: flex;
@@ -23,7 +23,7 @@ export const DialogContainer = styled.div`
 		color: white;
 	}
 
-	.MuiDialogTitle-root + .css-ypiqx9-MuiDialogContent-root {
+	& > div {
 		display: flex;
 	}
 `

@@ -13,7 +13,7 @@ const Homepage: React.FC = () => {
 				(pokemon: IPokemons, index: number) => ({
 					...pokemon,
 					id: (index + 1).toString(),
-					gifUrl: `src/assets/pokemons/poke_${index + 1}.gif`
+					gifUrl: `/pokemons/poke_${index + 1}.gif`
 				})
 			)
 			state.setPokemons(pokemonsWithId)

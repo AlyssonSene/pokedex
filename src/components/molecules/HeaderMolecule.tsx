@@ -1,8 +1,8 @@
 import React from 'react'
-import pokemonLogo from '../../assets/images/pokemonLogo.png'
 import * as C from '../../styles/headerStyles'
 import ImageAtom from '../atoms/ImageAtom'
 import TextAtom from '../atoms/TextAtom'
+import pokemonLogo from '/images/pokemonLogo.png'
 
 const HeaderMolecule: React.FC = () => {
 	return (

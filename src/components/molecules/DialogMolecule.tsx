@@ -1,5 +1,4 @@
 import Dialog from '@mui/material/Dialog'
-import DialogContent from '@mui/material/DialogContent'
 import DialogTitle from '@mui/material/DialogTitle'
 import Slide from '@mui/material/Slide'
 import { TransitionProps } from '@mui/material/transitions'
@@ -34,7 +33,7 @@ const DialogMolecule: React.FC<IDialog> = ({
 		>
 			<C.DialogContainer>
 				<DialogTitle>{pokemonName}</DialogTitle>
-				<DialogContent>
+				<div>
 					<div className='pokemonGif'>
 						<ImageAtom url={gifUrl} alt={pokemonName} />
 					</div>
@@ -76,7 +75,7 @@ const DialogMolecule: React.FC<IDialog> = ({
 							</div>
 						</C.TypesContainer>
 					</C.Informations>
-				</DialogContent>
+				</div>
 			</C.DialogContainer>
 		</Dialog>
 	)

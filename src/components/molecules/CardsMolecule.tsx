@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { ICards } from '../../interfaces/atomsInterface'
 import { PokemonData } from '../../interfaces/dialogInterface'
 import * as C from '../../styles/homeStyles'
@@ -12,18 +12,33 @@ const CardsMolecule: React.FC<ICards> = ({
 	gifUrl
 }) => {
 	const [open, setOpen] = useState(false)
-	const [pokemonData, setPokemonData] = useState<PokemonData | null>(null)
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	const initial_data: PokemonData = {
+		weight: 0,
+		height: 0,
+		abilities: [{ ability: { name: '' } }],
+		types: [{ type: { name: '' } }]
+	}
+
+	const [pokemonData, setPokemonData] = useState<PokemonData>(initial_data)
 
 	const handleDialog = () => {
 		setOpen(!open)
 	}
 
 	const getPokemonData = useCallback(async () => {
-		if (pokemonData == null) {
-			const data: PokemonData = await getData(`/${pokemonName}`)
-			setPokemonData(data)
-		}
-	}, [pokemonData, pokemonName])
+		const data: PokemonData = await getData(`/${pokemonName}`)
+		setPokemonData({
+			weight: data.weight,
+			height: data.height,
+			abilities: [...data.abilities],
+			types: [...data.types]
+		})
+	}, [pokemonName])
+
+	useEffect(() => {
+		getPokemonData()
+	}, [getPokemonData])
 
 	return (
 		<C.PokemonCard

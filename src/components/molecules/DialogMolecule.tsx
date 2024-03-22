@@ -42,7 +42,7 @@ const DialogMolecule: React.FC<IDialog> = ({
 						<C.Abilities>
 							<TextAtom type={'h4'} text={'Habilidades: '} />
 							<div>
-								{pokemonData?.abilities.map((item, index) => {
+								{pokemonData?.abilities?.map((item, index) => {
 									return (
 										<TextAtom
 											key={index}
@@ -55,17 +55,20 @@ const DialogMolecule: React.FC<IDialog> = ({
 						</C.Abilities>
 						<C.HeightContainer>
 							<TextAtom type={'h4'} text={'Altura: '} />
-							<TextAtom type={'span'} text={`${pokemonData?.height / 10} M`} />
+							<TextAtom type={'span'} text={`${pokemonData.height / 10} M`} />
 						</C.HeightContainer>
 
 						<C.WeightContainer>
 							<TextAtom type={'h4'} text={'Peso: '} />
-							<TextAtom type={'span'} text={`${pokemonData?.weight / 10} Kg`} />
+							<TextAtom
+								type={'span'}
+								text={`${pokemonData.weight / 10} Kg` || ''}
+							/>
 						</C.WeightContainer>
 						<C.TypesContainer>
 							<TextAtom type={'h4'} text={'Tipo: '} />
 							<div>
-								{pokemonData?.types.map((item, index) => {
+								{pokemonData?.types?.map((item, index) => {
 									return (
 										<TextAtom key={index} text={item.type.name} type={'span'} />
 									)

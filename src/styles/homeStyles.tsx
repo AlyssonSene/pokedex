@@ -25,13 +25,11 @@ export const PokemonCard = styled.div`
 	text-align: center;
 	color: #f1f1f1;
 	width: 220px;
-	height: 280px;
 	cursor: pointer;
-	div {
-		h4 {
-			width: 100%;
-		}
+	h4 {
+		width: 100%;
 	}
+
 	img {
 		padding: 0;
 		margin: 0;
@@ -51,8 +49,7 @@ export const Footer = styled.div`
 	justify-content: center;
 	width: 100%;
 	position: relative;
-	margin-top: 60px;
-	bottom: 0;
+	margin-top: 50px;
 `
 
 export const PaginationContainer = styled.div`

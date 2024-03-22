@@ -5,7 +5,6 @@ export const HeaderContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height: 200px;
 `
 
 export const LogoContainer = styled.div`
